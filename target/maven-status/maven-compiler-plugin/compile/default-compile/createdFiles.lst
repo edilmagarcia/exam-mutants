@@ -1,0 +1,6 @@
+com\mercadolibre\exam\mutants\AppRun.class
+com\mercadolibre\exam\mutants\detector\impl\MutantDetectorDNABased.class
+com\mercadolibre\exam\mutants\services\impl\MutantsServiceImpl.class
+com\mercadolibre\exam\mutants\services\MutantsService.class
+com\mercadolibre\exam\mutants\detector\MutantDetector.class
+com\mercadolibre\exam\mutants\detector\exceptions\InputValidationException.class
