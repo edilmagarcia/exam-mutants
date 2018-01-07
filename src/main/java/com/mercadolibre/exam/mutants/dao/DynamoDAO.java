@@ -17,10 +17,6 @@ public class DynamoDAO {
 	public DynamoDAO() {
 		
 		Properties props = System.getProperties();
-		/**
-		 *  PUT HERE THE AWS CREDENTIALS
-		 */
-		
 	    client = AmazonDynamoDBClientBuilder.standard()
 				.withRegion(Regions.fromName("us-east-1"))
 				.build();
