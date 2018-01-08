@@ -1,11 +1,11 @@
-package com.mercadolibre.exam.mutants.detector.exception;
+package com.mercadolibre.exam.mutants.exception;
 
-public class DatabaseException extends Exception{
+public class ServiceException extends Exception{
 	
 	private static final long serialVersionUID = 1L;
 	private String message;
 	
-	public  DatabaseException(String message) {
+	public  ServiceException(String message) {
 		this.message = message;
 	}
 	

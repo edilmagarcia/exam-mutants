@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.amazonaws.services.dynamodbv2.model.InternalServerErrorException;
-import com.mercadolibre.exam.mutants.detector.exception.ServiceException;
+import com.mercadolibre.exam.mutants.exception.ServiceException;
 import com.mercadolibre.exam.mutants.model.Stats;
 import com.mercadolibre.exam.mutants.service.StatsService;
 

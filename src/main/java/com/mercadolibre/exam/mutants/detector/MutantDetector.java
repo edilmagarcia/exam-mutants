@@ -1,6 +1,6 @@
 package com.mercadolibre.exam.mutants.detector;
 
-import com.mercadolibre.exam.mutants.detector.exception.InputValidationException;
+import com.mercadolibre.exam.mutants.exception.InputValidationException;
 
 public interface MutantDetector {
 	

@@ -1,7 +1,5 @@
 package com.mercadolibre.exam.mutants.dao;
 
-import java.util.Properties;
-
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -16,7 +14,6 @@ public abstract class DynamoDAO {
 	
 	public DynamoDAO() {
 		
-		Properties props = System.getProperties();
 	    client = AmazonDynamoDBClientBuilder.standard()
 				.withRegion(Regions.fromName("us-east-1"))
 				.build();

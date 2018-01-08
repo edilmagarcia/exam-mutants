@@ -1,6 +1,6 @@
 package com.mercadolibre.exam.mutants.dao;
 
-import com.mercadolibre.exam.mutants.detector.exception.DatabaseException;
+import com.mercadolibre.exam.mutants.exception.DatabaseException;
 import com.mercadolibre.exam.mutants.model.Human;
 import com.mercadolibre.exam.mutants.model.Mutant;
 

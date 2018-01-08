@@ -8,9 +8,9 @@ import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.mercadolibre.exam.mutants.dao.impl.DBServiceDAOImpl;
-import com.mercadolibre.exam.mutants.detector.exception.DatabaseException;
-import com.mercadolibre.exam.mutants.detector.exception.InputValidationException;
-import com.mercadolibre.exam.mutants.detector.exception.ServiceException;
+import com.mercadolibre.exam.mutants.exception.DatabaseException;
+import com.mercadolibre.exam.mutants.exception.InputValidationException;
+import com.mercadolibre.exam.mutants.exception.ServiceException;
 import com.mercadolibre.exam.mutants.model.Human;
 import com.mercadolibre.exam.mutants.model.Mutant;
 import com.mercadolibre.exam.mutants.service.impl.MutantsServiceImpl;

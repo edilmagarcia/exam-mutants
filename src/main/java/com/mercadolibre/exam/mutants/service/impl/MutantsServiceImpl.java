@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 
 import com.mercadolibre.exam.mutants.dao.DBServiceDAO;
 import com.mercadolibre.exam.mutants.detector.MutantDetector;
-import com.mercadolibre.exam.mutants.detector.exception.DatabaseException;
-import com.mercadolibre.exam.mutants.detector.exception.InputValidationException;
-import com.mercadolibre.exam.mutants.detector.exception.ServiceException;
 import com.mercadolibre.exam.mutants.detector.impl.MutantDetectorDNABased;
+import com.mercadolibre.exam.mutants.exception.DatabaseException;
+import com.mercadolibre.exam.mutants.exception.InputValidationException;
+import com.mercadolibre.exam.mutants.exception.ServiceException;
 import com.mercadolibre.exam.mutants.model.Human;
 import com.mercadolibre.exam.mutants.model.Mutant;
 import com.mercadolibre.exam.mutants.service.MutantsService;

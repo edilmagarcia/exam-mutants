@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 import com.mercadolibre.exam.mutants.dao.DBServiceDAO;
 import com.mercadolibre.exam.mutants.dao.DynamoDAO;
-import com.mercadolibre.exam.mutants.detector.exception.DatabaseException;
+import com.mercadolibre.exam.mutants.exception.DatabaseException;
 import com.mercadolibre.exam.mutants.model.Human;
 import com.mercadolibre.exam.mutants.model.Mutant;
 

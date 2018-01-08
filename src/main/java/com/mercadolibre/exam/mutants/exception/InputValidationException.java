@@ -1,4 +1,4 @@
-package com.mercadolibre.exam.mutants.detector.exception;
+package com.mercadolibre.exam.mutants.exception;
 
 public class InputValidationException extends Exception {
 	

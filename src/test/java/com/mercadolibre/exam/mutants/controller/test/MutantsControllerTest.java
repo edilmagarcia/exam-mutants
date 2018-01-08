@@ -16,8 +16,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.util.Assert;
 
 import com.mercadolibre.exam.mutants.controller.MutantsController;
-import com.mercadolibre.exam.mutants.detector.exception.InputValidationException;
-import com.mercadolibre.exam.mutants.detector.exception.ServiceException;
+import com.mercadolibre.exam.mutants.exception.InputValidationException;
+import com.mercadolibre.exam.mutants.exception.ServiceException;
 import com.mercadolibre.exam.mutants.service.impl.MutantsServiceImpl;
 
 public class MutantsControllerTest {

@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mercadolibre.exam.mutants.detector.exception.InputValidationException;
-import com.mercadolibre.exam.mutants.detector.exception.ServiceException;
+import com.mercadolibre.exam.mutants.exception.InputValidationException;
+import com.mercadolibre.exam.mutants.exception.ServiceException;
 import com.mercadolibre.exam.mutants.model.DNASequence;
 import com.mercadolibre.exam.mutants.service.MutantsService;
 
