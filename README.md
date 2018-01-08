@@ -1,5 +1,5 @@
-Examen Mutantes de MercadoLibre
-----------------------------------
+# Examen Mutantes! de MercadoLibre :zap: :zap: :zap:
+
 Introducción:
 El siguiente ejercicio consiste en un API REST que nos permitirá consultar adns y verificar si se trata de un adn mutante o humano.
 También podremos consultar el ratio de mutantes / humanos registrados luego de ser analizados en cada una de las requests al api.
@@ -7,7 +7,7 @@ También podremos consultar el ratio de mutantes / humanos registrados luego de 
 El enunciado se encuentra en el root del repositorio.
 
 -----------
-Funcionalidades:
+## Funcionalidades:
 
 Verificación de ADN:
 
@@ -24,7 +24,7 @@ Aclaraciones: las cadenas enviadas deben unicamente estar compuestas por las bas
 
 Si se envía mas de una vez la misma secuencia de adn, la misma se pisará en la base de datos, no grabandola de forma duplicada. Por lo cual, si es la unica secuencia que ingresa al sistema, el ratio ni los contadores se veran modificados.
 
-Estadisticas:
+## Estadisticas:
 
 Se debe realizar un get a la siguiente URL: http://mutants.us-east-1.elasticbeanstalk.com/stats
 
@@ -34,7 +34,7 @@ Será devuelto un JSON con el siguiente formato de ejemplo:
 
 -----
 
-Tecnologías involucradas y requisitos para el desarrollo local:
+## Tecnologías involucradas y requisitos para el desarrollo local:
 
 El proyecto está desarrollado en JAVA 1.8. Se utilizó Maven para la gestión de dependencias y actividades de instalación, build y packaging.
 La tecnología utilizada para crear el API Rest fue la última versión de SpringBoot (1.5.9). 
