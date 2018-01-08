@@ -11,7 +11,7 @@ Funcionalidades:
 
 Verificación de ADN:
 
-Se debe realizar un post al endpoint http://mutants.us-east-1.elasticbeanstalk.com de la siguiente forma de ejemplo:
+Se debe realizar un post al endpoint http://mutants.us-east-1.elasticbeanstalk.com/mutant de la siguiente forma de ejemplo:
 
 POST → /mutant/
 {
@@ -19,6 +19,8 @@ POST → /mutant/
 }
 
 En caso de verificarse el ADN mutante, se obtendrá un 200-OK. Caso contrario, si es humano obtendremos un 403-FORBIDDEN.
+
+Nota: las cadenas enviadas deben unicamente estar compuestas por las bases nitrogenadas A, C, G o T. y la cantidad de bases por cadena debe ser igual para todas e igual a la cantidad de cadenas enviadas.
 
 Estadisticas:
 
