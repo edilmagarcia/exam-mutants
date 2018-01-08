@@ -8,7 +8,7 @@ El enunciado se encuentra en el root del repositorio.
 
 ## Funcionalidades:
 
-Verificación de ADN:
+### Verificación de ADN:
 
 Se debe realizar un post al endpoint http://mutants.us-east-1.elasticbeanstalk.com/mutant de la siguiente forma de ejemplo:
 
@@ -23,7 +23,7 @@ Aclaraciones: las cadenas enviadas deben unicamente estar compuestas por las bas
 
 Si se envía mas de una vez la misma secuencia de adn, la misma se pisará en la base de datos, no grabandola de forma duplicada. Por lo cual, si es la unica secuencia que ingresa al sistema, el ratio ni los contadores se veran modificados.
 
-## Estadisticas:
+### Estadisticas:
 
 Se debe realizar un get a la siguiente URL: http://mutants.us-east-1.elasticbeanstalk.com/stats
 
