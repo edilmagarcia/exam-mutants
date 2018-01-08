@@ -20,7 +20,9 @@ POST → /mutant/
 
 En caso de verificarse el ADN mutante, se obtendrá un 200-OK. Caso contrario, si es humano obtendremos un 403-FORBIDDEN.
 
-Nota: las cadenas enviadas deben unicamente estar compuestas por las bases nitrogenadas A, C, G o T. y la cantidad de bases por cadena debe ser igual para todas e igual a la cantidad de cadenas enviadas.
+Aclaraciones: las cadenas enviadas deben unicamente estar compuestas por las bases nitrogenadas A, C, G o T. y la cantidad de bases por cadena debe ser igual para todas e igual a la cantidad de cadenas enviadas.
+
+Si se envía mas de una vez la misma secuencia de adn, la misma se pisará en la base de datos, no grabandola de forma duplicada. Por lo cual, si es la unica secuencia que ingresa al sistema, el ratio ni los contadores se veran modificados.
 
 Estadisticas:
 
