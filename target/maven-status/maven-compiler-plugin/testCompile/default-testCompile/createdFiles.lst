@@ -1,0 +1,4 @@
+com\mercadolibre\exam\mutants\controller\test\MutantsControllerTest.class
+com\mercadolibre\exam\mutants\service\impl\test\MutantsServiceImplTest.class
+com\mercadolibre\exam\mutants\service\impl\test\StatsServiceImplTest.class
+com\mercadolibre\exam\mutants\controller\test\StatsControllerTest.class
