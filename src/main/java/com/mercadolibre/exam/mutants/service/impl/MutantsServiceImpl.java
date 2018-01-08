@@ -5,27 +5,28 @@ import org.springframework.stereotype.Service;
 
 import com.mercadolibre.exam.mutants.dao.DBServiceDAO;
 import com.mercadolibre.exam.mutants.detector.MutantDetector;
-import com.mercadolibre.exam.mutants.detector.exceptions.DatabaseException;
-import com.mercadolibre.exam.mutants.detector.exceptions.ServiceException;
+import com.mercadolibre.exam.mutants.detector.exception.DatabaseException;
+import com.mercadolibre.exam.mutants.detector.exception.InputValidationException;
+import com.mercadolibre.exam.mutants.detector.exception.ServiceException;
 import com.mercadolibre.exam.mutants.detector.impl.MutantDetectorDNABased;
-import com.mercadolibre.exam.mutants.pojos.Human;
-import com.mercadolibre.exam.mutants.pojos.Mutant;
+import com.mercadolibre.exam.mutants.model.Human;
+import com.mercadolibre.exam.mutants.model.Mutant;
 import com.mercadolibre.exam.mutants.service.MutantsService;
 
 @Service
 public class MutantsServiceImpl implements MutantsService {
 	
 	@Autowired	
-	DBServiceDAO dbServiceDAO;
+	private DBServiceDAO dbServiceDAO;
 	
 	@Override
-	public boolean isMutant(String[] dna) throws ServiceException{
+	public boolean isMutant(String[] dna) throws ServiceException, InputValidationException{
 		
 		MutantDetector mutantDetector = new MutantDetectorDNABased();
 		boolean isMutant = false;
 		
 		try {
-			
+		
 			isMutant = mutantDetector.isMutant(dna);
 			 
 			if(isMutant) {

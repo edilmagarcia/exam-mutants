@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 import com.mercadolibre.exam.mutants.dao.DBServiceDAO;
 import com.mercadolibre.exam.mutants.dao.DynamoDAO;
-import com.mercadolibre.exam.mutants.detector.exceptions.DatabaseException;
-import com.mercadolibre.exam.mutants.pojos.Human;
-import com.mercadolibre.exam.mutants.pojos.Mutant;
+import com.mercadolibre.exam.mutants.detector.exception.DatabaseException;
+import com.mercadolibre.exam.mutants.model.Human;
+import com.mercadolibre.exam.mutants.model.Mutant;
 
 /**
  * DynamoDB Implementation of data access layer

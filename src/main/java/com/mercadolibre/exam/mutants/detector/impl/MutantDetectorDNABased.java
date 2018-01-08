@@ -1,10 +1,9 @@
 package com.mercadolibre.exam.mutants.detector.impl;
 
-import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 import com.mercadolibre.exam.mutants.detector.MutantDetector;
-import com.mercadolibre.exam.mutants.detector.exceptions.InputValidationException;
+import com.mercadolibre.exam.mutants.detector.exception.InputValidationException;
 
 public class MutantDetectorDNABased implements MutantDetector {
 	
@@ -25,7 +24,7 @@ public class MutantDetectorDNABased implements MutantDetector {
 		BOTTOM, TOP_INCLUDING_MAIN_DIAG
 	}
 	
-    public static void main( String[] args )
+    /*public static void main( String[] args )
     {
     	MutantDetectorDNABased  detectorDNABased  = new MutantDetectorDNABased();
     	
@@ -50,7 +49,7 @@ public class MutantDetectorDNABased implements MutantDetector {
 		else
 			System.out.println("ES HUMANO");
     	
-    }
+    }*/
 	
 	private boolean readHorizontalOrVertical(ReadDirections direction, char startChar, int index) {
 		
@@ -132,70 +131,65 @@ public class MutantDetectorDNABased implements MutantDetector {
 		return false;
 	}
 			
-	public boolean isMutant(String[] dna) {
+	public boolean isMutant(String[] dna) throws InputValidationException{
 		
-		try {
-			char lastCharacter;
-			
-			dnaSecuence = populateDnaSecuence(dna);
-			
-			if(dnaSecuence.length < 4) {
-				return false;
-			}
-			
-			// Horizontal read
-			for (int row = 0; row < dnaSecuence.length; row++) {
-				lastCharacter = dnaSecuence[row][0];
-				if(readHorizontalOrVertical(ReadDirections.HORIZONTAL, lastCharacter, row) == true) {
-					return true;
-				}	
-			}
-			
-			// Vertical read
-			for (int col = 0; col < dnaSecuence.length; col++) {
-				lastCharacter = dnaSecuence[0][col];
-				if(readHorizontalOrVertical(ReadDirections.VERTICAL, lastCharacter, col) == true) {
-					return true;
-				}
-			}
-
-			// Bottom diagonals, from left, not including main diagonal
-			for (int row = 1; row < dnaSecuence.length; row++) {
-				lastCharacter = dnaSecuence[row][0];
-				if(readDiagonals(DiagonalReadDirections.FROM_LEFT, DiagonalReadType.BOTTOM, lastCharacter, row) == true) {
-					return true;
-				}	
-				
-			}
-			
-			// Bottom diagonals, from right, not including main diagonal
-			for (int row = 1; row < dnaSecuence.length; row++) {
-				lastCharacter = dnaSecuence[row][dnaSecuence.length - 1];
-				if(readDiagonals(DiagonalReadDirections.FROM_RIGHT, DiagonalReadType.BOTTOM, lastCharacter, row) == true) {
-					return true;
-				}	
-			}
-			
-			// Top diagonals, from left, including main diagonal
-			for (int col = 0; col < dnaSecuence.length; col++) {
-				lastCharacter = dnaSecuence[0][col];
-				if(readDiagonals(DiagonalReadDirections.FROM_LEFT, DiagonalReadType.TOP_INCLUDING_MAIN_DIAG, lastCharacter, col) == true) {
-					return true;
-				}	
-				
-			}
-
-			// Top diagonals, from right, including main diagonal
-			for (int col = 1; col < dnaSecuence.length; col++) {
-				lastCharacter = dnaSecuence[0][dnaSecuence.length - col];
-				if(readDiagonals(DiagonalReadDirections.FROM_RIGHT,  DiagonalReadType.TOP_INCLUDING_MAIN_DIAG, lastCharacter, col) == true) {
-					return true;
-				}		
-			}	
-		} catch (InputValidationException ex) {
-			Logger  logger = Logger.getGlobal();
-			logger.info(ex.getMessage());
+		char lastCharacter;
+		
+		dnaSecuence = populateDnaSecuence(dna);
+		
+		if(dnaSecuence.length < 4) {
+			return false;
 		}
+		
+		// Horizontal read
+		for (int row = 0; row < dnaSecuence.length; row++) {
+			lastCharacter = dnaSecuence[row][0];
+			if(readHorizontalOrVertical(ReadDirections.HORIZONTAL, lastCharacter, row) == true) {
+				return true;
+			}	
+		}
+		
+		// Vertical read
+		for (int col = 0; col < dnaSecuence.length; col++) {
+			lastCharacter = dnaSecuence[0][col];
+			if(readHorizontalOrVertical(ReadDirections.VERTICAL, lastCharacter, col) == true) {
+				return true;
+			}
+		}
+
+		// Bottom diagonals, from left, not including main diagonal
+		for (int row = 1; row < dnaSecuence.length; row++) {
+			lastCharacter = dnaSecuence[row][0];
+			if(readDiagonals(DiagonalReadDirections.FROM_LEFT, DiagonalReadType.BOTTOM, lastCharacter, row) == true) {
+				return true;
+			}	
+			
+		}
+		
+		// Bottom diagonals, from right, not including main diagonal
+		for (int row = 1; row < dnaSecuence.length; row++) {
+			lastCharacter = dnaSecuence[row][dnaSecuence.length - 1];
+			if(readDiagonals(DiagonalReadDirections.FROM_RIGHT, DiagonalReadType.BOTTOM, lastCharacter, row) == true) {
+				return true;
+			}	
+		}
+		
+		// Top diagonals, from left, including main diagonal
+		for (int col = 0; col < dnaSecuence.length; col++) {
+			lastCharacter = dnaSecuence[0][col];
+			if(readDiagonals(DiagonalReadDirections.FROM_LEFT, DiagonalReadType.TOP_INCLUDING_MAIN_DIAG, lastCharacter, col) == true) {
+				return true;
+			}	
+			
+		}
+
+		// Top diagonals, from right, including main diagonal
+		for (int col = 1; col < dnaSecuence.length; col++) {
+			lastCharacter = dnaSecuence[0][dnaSecuence.length - col];
+			if(readDiagonals(DiagonalReadDirections.FROM_RIGHT,  DiagonalReadType.TOP_INCLUDING_MAIN_DIAG, lastCharacter, col) == true) {
+				return true;
+			}		
+		}	
 		
 		return false;
 	}

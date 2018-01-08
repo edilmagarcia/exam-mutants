@@ -1,7 +1,7 @@
 package com.mercadolibre.exam.mutants.service;
 
-import com.mercadolibre.exam.mutants.detector.exceptions.ServiceException;
-import com.mercadolibre.exam.mutants.pojos.Stats;
+import com.mercadolibre.exam.mutants.detector.exception.ServiceException;
+import com.mercadolibre.exam.mutants.model.Stats;
 
 public interface StatsService {
 	

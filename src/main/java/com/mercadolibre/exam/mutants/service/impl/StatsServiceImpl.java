@@ -4,16 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mercadolibre.exam.mutants.dao.DBServiceDAO;
-import com.mercadolibre.exam.mutants.detector.exceptions.DatabaseException;
-import com.mercadolibre.exam.mutants.detector.exceptions.ServiceException;
-import com.mercadolibre.exam.mutants.pojos.Stats;
+import com.mercadolibre.exam.mutants.detector.exception.DatabaseException;
+import com.mercadolibre.exam.mutants.detector.exception.ServiceException;
+import com.mercadolibre.exam.mutants.model.Stats;
 import com.mercadolibre.exam.mutants.service.StatsService;
 
 @Service
-public class StatsServiceImpl implements StatsService{
+public class StatsServiceImpl implements StatsService {
 	
 	@Autowired
-	DBServiceDAO dbServiceDAO;
+	private DBServiceDAO dbServiceDAO;
 	
 	@Override
 	public Stats getStats() throws ServiceException{
