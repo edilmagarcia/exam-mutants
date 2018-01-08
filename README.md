@@ -6,7 +6,6 @@ También podremos consultar el ratio de mutantes / humanos registrados luego de 
 
 El enunciado se encuentra en el root del repositorio.
 
------------
 ## Funcionalidades:
 
 Verificación de ADN:
@@ -32,7 +31,6 @@ Será devuelto un JSON con el siguiente formato de ejemplo:
 
 {"count_mutant_dna":2,"count_human_dna":3,"ratio":0.0}
 
------
 
 ## Tecnologías involucradas y requisitos para el desarrollo local:
 
